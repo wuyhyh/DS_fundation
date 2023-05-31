@@ -1,2 +1,4 @@
-# Algorithm Manual 2ed Chinese
-算法设计手册中文版的代码实现
+# 基本数据结构和算法的C语言实现
+## linked list
+## loop queue
+## stack based on array
