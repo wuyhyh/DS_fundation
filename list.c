@@ -102,25 +102,32 @@ int main()
 		insert_list(list_foo, i);
 	}
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
-	insert_list(list_foo, 1000);
+	insert_list(list_foo, 1000); //insert at start
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
 	insert_list(pred_node(list_foo, 5), 2000); //在list的中间插入
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
 	insert_list(search_list(list_foo, 1), 3000); //insert at list end
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
 	printf("---- delete ----\n");
 	delete_list(list_foo, 1000); //delete first node
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
 	delete_list(list_foo, 2000); //delete node at middle
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
 	delete_list(list_foo, 3000); //delete last node
 	print_list(list_foo);
+	printf("len of list = %d\n", len_of_list(list_foo));
 
 	return 0;
 }
