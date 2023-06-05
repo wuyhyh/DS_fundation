@@ -51,7 +51,7 @@ elemtype pop(stack *s)
 	return s->data[s->top--];
 }
 
-void destory_stack(stack *s)
+void destroy_stack(stack *s)
 {
 	elemtype *data = s->data;
 	if (data != NULL)
@@ -83,7 +83,7 @@ int main()
 
 	pop(stack_foo);
 
-	destory_stack(stack_foo);
+	destroy_stack(stack_foo);
 
 	return 0;
 }

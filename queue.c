@@ -57,7 +57,7 @@ elemtype dequeue(queue *q)
 	return ret;
 }
 
-void destory_queue(queue *q)
+void destroy_queue(queue *q)
 {
 	elemtype *data = q->data;
 	if (data != NULL)
@@ -89,7 +89,7 @@ int main()
 	printf("\n");
 	dequeue(queue_foo);
 
-	destory_queue(queue_foo);
+	destroy_queue(queue_foo);
 
 	//这里不会再执行
 	enqueue(queue_foo, 100);
