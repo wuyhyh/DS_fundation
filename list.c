@@ -90,6 +90,19 @@ void print_list(list *l)
 	printf("\n");
 }
 
+void destroy_list(list *l)
+{
+	list *head = l;
+	list *tmp = NULL;
+	while (head->next) {
+		tmp = head->next;
+		head->next = tmp->next;
+		free(tmp);
+	}
+	printf("list is destroyed.\n");
+	free(head);
+}
+
 int main()
 {
 	printf("---- create list ----\n");
@@ -128,6 +141,8 @@ int main()
 	delete_list(list_foo, 3000); //delete last node
 	print_list(list_foo);
 	printf("len of list = %d\n", len_of_list(list_foo));
+
+	destroy_list(list_foo);
 
 	return 0;
 }

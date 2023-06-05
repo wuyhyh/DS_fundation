@@ -51,6 +51,15 @@ elemtype pop(stack *s)
 	return s->data[s->top--];
 }
 
+void destory_stack(stack *s)
+{
+	elemtype *data = s->data;
+	if (data != NULL)
+		free(data);
+	printf("stack is destroyed.\n");
+	free(s);
+}
+
 int main()
 {
 	printf("---- create stack ----\n");
@@ -60,7 +69,7 @@ int main()
 	for (int i = 1; i <= 10; i++)
 		push(stack_foo, i);
 
-	push(stack_foo, 100);//测试溢出
+	push(stack_foo, 100); //测试溢出
 
 	printf("---- pop ----\n");
 	printf("last elem last time = %d\n", pop(stack_foo));
@@ -73,6 +82,8 @@ int main()
 	printf("\n");
 
 	pop(stack_foo);
+
+	destory_stack(stack_foo);
 
 	return 0;
 }
